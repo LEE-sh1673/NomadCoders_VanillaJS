@@ -13,7 +13,7 @@
         <i class="fas fa-wifi"></i>
       </div>
       <div class="status-bar__column">
-        <span>18:43</span>
+        <span id="status-bar__clock">00:00</span>
       </div>
       <div class="status-bar__column">
         <span>100%</span>
@@ -22,27 +22,55 @@
       </div>
     </div>
 
+    <header class="screen-header">
+      <h1 class="screen-header__title">Friends</h1>
+      <div class="screen-header__icons">
+        <span><i class="fas fa-search fa-lg"></i></span>
+        <span><i class="fas fa-music fa-lg"></i></span>
+        <span><i class="fas fa-cog fa-lg"></i></span>
+      </div>
+    </header>
+
+    <a id="friends-display-link"
+      ><i class="fas fa-info-circle"></i> Friends' Names Display
+      <i class="fas fa-chevron-right fa-sm"></i>
+    </a>
+
+    <div class="user-component">
+      <div class="user-component__column">
+        <img
+          class="user-component__avatar"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3gKSUwSpQQqXjfH9NmBOZaWpTmBmtXvKW5Q&usqp=CAU"
+        />
+        <div class="user-component__text">
+          <h4 class="user-component__title">Test User</h4>
+          <h6 class="user-component__subtitle">example@gmail.com</h6>
+        </div>
+      </div>
+      <div class="user-component__column"></div>
+    </div>
+
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__btn">
           <a class="nav__link" href="./friends.html"
-            ><i class="fas fa-user fa-lg"></i>Friends</a
-          >
+            ><i class="fas fa-user fa-lg"></i
+          ></a>
         </li>
         <li class="nav__btn">
-          <a class="nav__link" href="#"
-            ><i class="far fa-comment fa-lg"></i>Chats</a
-          >
+          <a class="nav__link" href="#">
+            <span class="nav__notification">1</span>
+            <i class="far fa-comment fa-lg"></i>
+          </a>
         </li>
         <li class="nav__btn">
-          <a class="nav__link" href="#"
-            ><i class="fas fa-search fa-lg"></i>Search</a
-          >
+          <a class="nav__link" href="#"><i class="fas fa-search fa-lg"></i></a>
         </li>
         <li class="nav__btn">
-          <a class="nav__link" href="#"
-            ><i class="fas fa-ellipsis-h fa-lg"></i>Find</a
-          >
+          <a class="nav__link" href="#">
+            <span class="nav__notification--dot"></span>
+            <i class="fas fa-ellipsis-h fa-lg"></i
+          ></a>
         </li>
       </ul>
     </nav>
@@ -51,5 +79,6 @@
       src="https://kit.fontawesome.com/f23373f05e.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/app.js" defer type="module"></script>
   </body>
 </html>
