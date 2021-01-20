@@ -1,0 +1,188 @@
+.js-toDo__content {
+  width: 75%;
+  background-color: var(--blue-opacity-8);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px 45px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.js-toDoForm__title {
+  color: #fff;
+  font-weight: 500;
+}
+
+.js-toDoForm__title i {
+  margin-right: 10px;
+}
+
+.js-toDoForm {
+  position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.js-toDoForm input[type="text"] {
+  background-color: var(--blue-300);
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  width: 100%;
+  color: #fff;
+}
+
+.js-toDoForm--header {
+  display: block !important;
+}
+
+.js-toDoForm input[type="text"]::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.js-toDoForm input[type="text"]:focus {
+  outline: none;
+}
+
+.js-toDoList__container {
+  padding: 30px 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.js-toDoList__container p {
+  color: #fff;
+  background-color: var(--blue-200);
+  display: inline-block;
+  padding: 2.5px 10px;
+  border-radius: 5px;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.js-toDoList__container p i {
+  padding-right: 10px;
+  opacity: 0.7;
+}
+
+.toDoList__item-count {
+  padding-left: 10px;
+  color: var(--gray-200);
+}
+
+.js-toDoList {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.js-toDoList li {
+  background-color: #fff;
+  font-size: 17px;
+  padding: 10px 15px;
+  margin: 5px 0px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  animation: slide-up 0.6s ease;
+}
+
+.js-toDoList:last-child li {
+  animation: slide-down 0.6s ease;
+}
+
+.js-toDoList:last-child li span {
+  text-decoration-line: line-through;
+  color: var(--gray-300);
+}
+
+.js-toDoList span {
+  width: 100%;
+  display: inline-block;
+}
+
+.js-toDoList button {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.check {
+  padding: 0;
+  padding-right: 5px;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 700px) {
+  .js-toDo__content {
+    background-color: var(--gray-100);
+    padding: 10px 20px;
+    height: 100vh;
+  }
+
+  .js-toDoForm__title {
+    /* color: var(--blue-opacity-8); */
+    display: none;
+  }
+
+  .js-toDoList__container {
+    padding-top: 15px;
+  }
+
+  .js-toDoList__container p {
+    background-color: var(--blue-opacity-8);
+  }
+
+  .toDoList__item-count {
+    color: var(--gray-100);
+  }
+
+  .js-toDoList li {
+    border: 1px solid var(--gray-100);
+    font-size: 16px;
+  }
+
+  .js-toDoForm {
+    bottom: 15px;
+  }
+
+  .js-toDoForm input[type="text"] {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    color: var(--gray-300);
+  }
+
+  .js-toDoForm input[type="text"]::placeholder {
+    color: var(--gray-200);
+  }
+}

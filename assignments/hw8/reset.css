@@ -127,20 +127,3 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-input:focus {
-  outline: none;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.fa-md {
-  font-size: 1.21em;
-}

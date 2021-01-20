@@ -1,8 +1,8 @@
 :root {
   --yellow: #fbbc05;
-  --blue: #6c63ff;
+  --blue: #5295f5;
   --red-100: #ea4335;
-  --red-200: #db4a39;
+  --red-200: #de3334;
   --green: #34a853;
   --gray-100: #f1f3f4;
   --gray-200: #dee1e6;
@@ -10,4 +10,15 @@
   --gray-400: #5f6368;
   --gray-500: #535353;
   --gray-600: #202124;
+
+  --color-opacity: 0.8;
+
+  /* based on --gray-400 */
+  --gray-ui-100: rgba(95, 99, 104, 0.2);
+  --gray-ui-200: rgba(95, 99, 104, 0.4);
+  --gray-ui-300: rgba(95, 99, 104, 0.6);
+  --gray-ui-400: rgba(95, 99, 104, 0.8);
+
+  --horizontal-space: 16px;
+  --main-border: var(--gray-200);
 }

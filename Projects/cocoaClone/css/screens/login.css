@@ -1,35 +1,83 @@
 .welcome-header {
-  margin: 80px 0;
+  margin: 80px 0px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.welcome-header__title {
-  margin-bottom: 14px;
-  font-size: 28px;
-  font-weight: 500;
-  color: var(--blue);
+.welcome-tutorial-slider {
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  z-index: 999;
+  position: fixed;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 30px;
+}
+
+.tutorial-slider__title {
+  margin-top: 15vmin;
+  line-height: 1.4;
+}
+
+.tutorial-slider__text {
+  width: 100% !important;
+  font-size: 1rem !important;
+  margin: 16px 0px;
+}
+
+.tutorial-slider__cover {
+  max-width: 100vmin;
+}
+
+.tutorial-slider__cover img {
+  width: 100%;
+}
+
+.tutorial-slider__btn {
+  margin: 16px 0px !important;
+  background-color: var(--red-200) !important;
 }
 
 .welcome-header__cover {
-  max-width: 80vmin;
+  max-width: 35vmin;
+  margin: 9px auto;
 }
 
 .welcome-header__cover img {
   width: 100%;
 }
 
-.welcome-header__text {
+.welcome-header__title {
+  margin-bottom: 16px;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--gray-500);
+  /* color: var(--blue); */
+}
+
+.welcome-header__text,
+.welcome-header__text--sm {
   width: 75%;
   font-size: 15px;
+}
+
+.welcome-header__text--sm {
+  font-size: 13px;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
-  margin: 0 28px;
+  margin: 0 30px;
 }
 
 .login-form__btn {
@@ -53,7 +101,7 @@
 }
 
 .login-form__btn:focus {
-  border-color: var(--blue);
+  border-color: var(--gray-400);
 }
 
 .login-form__btn[type="submit"] {
@@ -62,7 +110,7 @@
   border-radius: 4px;
   cursor: pointer;
   color: #fff;
-  font-weight: bold;
+  font-weight: 500;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
@@ -75,5 +123,5 @@
 
 .login-form__a {
   color: var(--blue);
-  font-weight: bold;
+  font-weight: 500;
 }

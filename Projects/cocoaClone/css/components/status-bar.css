@@ -1,8 +1,8 @@
 .status-bar {
   display: flex;
   justify-content: center;
-  padding: 5px 3px;
-  font-size: 14px;
+  padding: 6px 8px;
+  font-size: 12px;
   color: var(--gray-500);
 }
 
@@ -26,5 +26,5 @@
 }
 
 .status-bar__column .fa-battery-full {
-  margin: 0 5px;
+  margin-left: 5px;
 }

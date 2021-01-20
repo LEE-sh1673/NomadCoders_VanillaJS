@@ -1,19 +1,23 @@
-import {
-  USER_INFO,
-  loginForm,
-  handleFormKeyPress,
-  handleFormSubmit,
-} from "./login.js";
+import { loadUserInfo, validSignPage } from "./login.js";
+import { setUserName } from "./friends.js";
 import "./status-bar.js";
 
-window.addEventListener("load", () => {
-  if (loginForm) {
-    if (USER_INFO) {
-      // if user info already saved on local storage, then move immediately.
+const userInfo = loadUserInfo();
+
+window.addEventListener("load", function () {
+  const isSignPage = validSignPage();
+
+  // if user information is alredy stored.
+  if (userInfo) {
+    if (!isSignPage) {
+      // if current page is not sign up/in pages..
+      setUserName(userInfo.username);
+    } else {
+      // if current page is sign up/in pages..
       window.location.replace("./friends.html");
     }
-    // if not, then add event listenter to register user info manipulations.
-    loginForm.addEventListener("keypress", handleFormKeyPress);
-    loginForm.addEventListener("submit", handleFormSubmit);
+  } else if (!isSignPage) {
+    // if current url is the page that are not show user before login..
+    window.location.replace("./index.html");
   }
 });

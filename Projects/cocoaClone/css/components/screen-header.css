@@ -2,15 +2,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: var(--horizontal-space);
+  color: var(--gray-500);
+  margin-bottom: 8px;
 }
 
 .screen-header__title {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 500;
-  color: var(--gray-600);
 }
 
-.screen-header__icons span {
+.screen-header__icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.screen-header__icons > span,
+.screen-header__icons a {
+  display: inline-block;
   margin-left: 14px;
+}
+
+.screen-header__icons a {
+  position: relative;
 }

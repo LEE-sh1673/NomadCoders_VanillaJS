@@ -1,0 +1,8 @@
+.gameStatus,
+.gameResult {
+  display: none;
+}
+
+.gameResult {
+  font-weight: bold;
+}

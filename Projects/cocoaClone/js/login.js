@@ -1,12 +1,67 @@
+// Static keys for local storage.
 const USERNAME = "currentUsername";
 const PASSWORD = "currentPassword";
 
-export const USER_INFO = loadUserInfo();
-export const loginForm = document.querySelector(".login-form");
+// DOM elements
+const walkThroughs = document.querySelector(".welcome-tutorial-slider");
+const walkThroughs__btn = document.querySelector(".tutorial-slider__btn");
+const loginForm = document.querySelector(".login-form");
 
-function loadUserInfo() {
-  const username = localStorage.getItem(USERNAME);
-  const password = localStorage.getItem(PASSWORD);
+// Flag for switch walkthough.
+let isFirst = true;
+
+// save user information to local storage.
+function saveUserInfo(username, password) {
+  sessionStorage.setItem(USERNAME, username);
+  sessionStorage.setItem(PASSWORD, password);
+}
+
+// If all of the register process is done, then showing walkthrough before we move on.
+function displayWalkThroughs() {
+  if (isFirst) {
+    walkThroughs.style.opacity = "1";
+    walkThroughs.style.zIndex = "1";
+    isFirst = false;
+  }
+}
+
+if (loginForm) {
+  // save current user information and move to friends page.
+  function handleFormKeyPress(event) {
+    if (event.key === "Enter") {
+      const username = event.target.form[0].value;
+      const password = event.target.form[1].value;
+      saveUserInfo(username, password);
+      displayWalkThroughs();
+    }
+  }
+
+  // save current user information and move to friends page.
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    const username = event.target[0].value;
+    const password = event.target[1].value;
+    saveUserInfo(username, password);
+    displayWalkThroughs();
+  }
+
+  // Add event listenter to register user info manipulations.
+  loginForm.addEventListener("keypress", handleFormKeyPress);
+  loginForm.addEventListener("submit", handleFormSubmit);
+}
+
+// If current walkthourh page is activated, then add event listener to go on next page.
+if (walkThroughs__btn) {
+  walkThroughs__btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.replace("./friends.html");
+  });
+}
+
+// load user information from local storage.
+export function loadUserInfo() {
+  const username = sessionStorage.getItem(USERNAME);
+  const password = sessionStorage.getItem(PASSWORD);
 
   if (username === null && password === null) {
     return null;
@@ -15,24 +70,6 @@ function loadUserInfo() {
   }
 }
 
-function saveUserInfo(username, password) {
-  localStorage.setItem(USERNAME, username);
-  localStorage.setItem(PASSWORD, password);
-}
-
-export function handleFormKeyPress(event) {
-  if (event.key === "Enter") {
-    const username = event.target.form[0].value;
-    const password = event.target.form[1].value;
-    saveUserInfo(username, password);
-    window.location.replace("./friends.html");
-  }
-}
-
-export function handleFormSubmit(event) {
-  event.preventDefault();
-  const username = event.target[0].value;
-  const password = event.target[1].value;
-  saveUserInfo(username, password);
-  window.location.replace("./friends.html");
+export function validSignPage() {
+  return loginForm !== null;
 }

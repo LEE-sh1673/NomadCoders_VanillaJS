@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Friends - CocoaTalk</title>
+    <title>Chats - CocoaTalk</title>
   </head>
   <body>
     <div class="status-bar">
@@ -23,58 +23,66 @@
     </div>
 
     <header class="screen-header">
-      <h1 class="screen-header__title">Friends</h1>
+      <h1 class="screen-header__title">Chats</h1>
       <div class="screen-header__icons">
         <span><i class="fas fa-search fa-md"></i></span>
+        <span><i class="far fa-comment-dots fa-md"></i></span>
         <span><i class="fas fa-music fa-md"></i></span>
         <span><i class="fas fa-cog fa-md"></i></span>
       </div>
     </header>
 
-    <a id="friends-display-link"
-      ><i class="fas fa-info-circle"></i> Friends' Names Display &nbsp;&nbsp;<i
-        class="fas fa-chevron-right fa-sm"
-      ></i>
-    </a>
-
-    <main class="friends-screen">
+    <main class="main-screen">
       <div class="user-component">
         <div class="user-component__column">
           <img
-            class="user-component__avatar user-component__avatar"
+            class="user-component__avatar user-component__avatar--sm"
             src="https://lh3.googleusercontent.com/proxy/NAbsdvimvTZiLvJ12sUuUZfeHAdfC-dbD4mjuuCJvD0jkmklFOphR4Pqj0i6EDisC6cqS4WiQG_FOeBGK51aBREVSmmL3S-BJG04wUGqHAMECvaM1AZ7p3Ers9M"
           />
           <div class="user-component__text">
             <h4 class="user-component__title" id="username"></h4>
-            <!-- <h6 class="user-component__subtitle">example@gmail.com</h6> -->
+            <h6 class="user-component__subtitle">
+              Please check my Cocoa Account.
+            </h6>
           </div>
         </div>
-        <div class="user-component__column"></div>
+        <div class="user-component__column">
+          <span class="user-component__time">21:22</span>
+          <div class="badge">1</div>
+        </div>
       </div>
-      <div class="friends-screen__channel">
-        <div class="friends-screen__channel-header">
-          <span>Channel</span>
-          <i class="fas fa-chevron-up fa-sm"></i>
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            class="user-component__avatar user-component__avatar--sm"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3gKSUwSpQQqXjfH9NmBOZaWpTmBmtXvKW5Q&usqp=CAU"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title">Lion</h4>
+            <h6 class="user-component__subtitle">
+              What's up? How are U today?
+            </h6>
+          </div>
         </div>
-        <div class="user-component">
-          <div class="user-component__column">
-            <img
-              class="user-component__avatar user-component__avatar--xs"
-              src="https://yellowid.tistory.com/favicon.ico"
-            />
-            <div class="user-component__text">
-              <h4 class="user-component__title user-component__title--not-bold">
-                Cocoa Plus
-              </h4>
-              <!-- <h6 class="user-component__subtitle">example@gmail.com</h6> -->
-            </div>
+        <div class="user-component__column">
+          <span class="user-component__time">19:47</span>
+          <div class="badge">1</div>
+        </div>
+      </div>
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            class="user-component__avatar user-component__avatar--sm"
+            src="https://cf.creatrip.com/original/blog/8482/rf8m9d35ep0db6tz8fv0w1ei01kabgg8.png?f=webp&q=80&d=500"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title">Muzi</h4>
+            <h6 class="user-component__subtitle">Did you finish homework?</h6>
           </div>
-          <div class="user-component__column">
-            <div>
-              <span>2</span>
-              <i class="fas fa-chevron-right fa-xs"></i>
-            </div>
-          </div>
+        </div>
+        <div class="user-component__column">
+          <span class="user-component__time">19:34</span>
+          <div class="badge">1</div>
         </div>
       </div>
     </main>
@@ -83,13 +91,13 @@
       <ul class="nav__list">
         <li class="nav__btn">
           <a class="nav__link" href="./friends.html"
-            ><i class="fas fa-user fa-lg"></i
+            ><i class="far fa-user fa-lg"></i
           ></a>
         </li>
         <li class="nav__btn">
           <a class="nav__link" href="./chats.html">
             <span class="nav__notification badge">1</span>
-            <i class="far fa-comment fa-lg"></i>
+            <i class="fas fa-comment fa-lg"></i>
           </a>
         </li>
         <li class="nav__btn">
