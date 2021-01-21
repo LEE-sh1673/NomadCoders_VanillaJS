@@ -20,7 +20,8 @@
 .user-component__avatar {
   width: 55px;
   height: 55px;
-  border-radius: 37.5%;
+  border-radius: 40%;
+  border: 1px solid var(--gray-100);
   margin-right: 15px;
 }
 
