@@ -18,13 +18,13 @@
 }
 
 .friends-screen__channel {
-  padding-top: 16px;
+  padding-top: 12px;
   margin-top: -16px;
   border-top: 1px solid var(--gray-200);
 }
 
 .friends-screen__channel-header {
-  margin-bottom: var(--horizontal-space);
+  margin-bottom: 12px; /*var(--horizontal-space);*/
   display: flex;
   justify-content: space-between;
   align-items: center;
