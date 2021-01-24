@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Momentum</title>
+    <link href="./src/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="js-clock">
+      <span class="clock__hours"></span>
+      <span class="clock__sep">:</span>
+      <span class="clock__minutes"></span>
+      <div class="clock__meridiem-wrapper">
+        <div class="clock__meridiem">PM</div>
+        <span class="clock__line"></span>
+        <span class="clock__seconds"></span>
+      </div>
+    </div>
+    <form class="js-form form">
+      <input type="text" placeholder="What is your name?" />
+    </form>
+    <h4 class="js-greetings greetings"></h4>
+    <div class="js-toDoList-wrapper">
+      <button>Todo</button>
+      <div class="js-toDoList-window">
+        <div class="js-toDoList-header">
+          <span>ToDoList</span>
+          <span id="js-toDoList-header__close">close</span>
+        </div>
+        <div class="js-toDoList-content">
+          <ul class="js-toDoList"></ul>
+          <form class="js-toDoForm">
+            <input type="text" placeholder="Write a to do" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <span class="js-weather">
+      <div class="weather__temperatures">
+        <img class="weather__icon"></img> 
+        <span class="weather__temperature"></span>
+      </div>
+      <span class="weather__place"></span>
+    </span>
+
+    <script src="./src/js/clock.js"></script>
+    <script src="./src/js/greeting.js"></script>
+    <script src="./src/js/todo.js"></script>
+    <script src="./src/js/bg.js"></script>
+    <script src="./src/js/weather.js"></script>
+  </body>
+</html>
