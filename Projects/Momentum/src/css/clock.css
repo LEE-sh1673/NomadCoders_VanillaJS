@@ -8,6 +8,7 @@
   color: #fff;
   z-index: 1;
   text-align: center;
+  overflow-y: hidden;
 }
 
 .js-clock > span {

@@ -1,5 +1,6 @@
 @import "./fonts.css";
 @import "./reset.css";
+@import "./noSupport.css";
 @import "./bg.css";
 @import "./clock.css";
 @import "./toDoList.css";
@@ -14,6 +15,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .form,
