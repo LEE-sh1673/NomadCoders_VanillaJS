@@ -7,36 +7,43 @@
     <link href="./src/css/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <!-- Image cover (filter or darker for background image.) -->
+    <div class="bgImage__cover"></div>
+    <!-- Clock part -->
     <div class="js-clock">
       <span class="clock__hours"></span>
       <span class="clock__sep">:</span>
       <span class="clock__minutes"></span>
       <div class="clock__meridiem-wrapper">
         <div class="clock__meridiem">PM</div>
-        <span class="clock__line"></span>
+        <!-- <span class="clock__line"></span> -->
         <span class="clock__seconds"></span>
       </div>
     </div>
+    <!-- Form (input name)-->
     <form class="js-form form">
-      <input type="text" placeholder="What is your name?" />
+      <input class = "input-form" type="text" placeholder="What is your name?" />
     </form>
     <h4 class="js-greetings greetings"></h4>
+    <!-- To-Do List -->
     <div class="js-toDoList-wrapper">
-      <button>Todo</button>
-      <div class="js-toDoList-window">
-        <div class="js-toDoList-header">
-          <span>ToDoList</span>
-          <span id="js-toDoList-header__close">close</span>
+      <div class="js-toDoList-window form">
+        <!-- To-Do Lists (Pending & Finished) -->
+        <h4 class = "js-toDoList-title">Tasks</h4>
+        <div class="js-toDoLists">
+          <p class = "js-toDoList-subtitle">Pending <span class = "toDoList__item-count" data-pending-tasks>0</span></p>
+          <ul class="js-toDoList" data-pending-list></ul>
+          <p class = "js-toDoList-subtitle">Finished <span class = "toDoList__item-count" data-finished-tasks>0</span></p>
+          <ul class="js-toDoList" data-finished-list>
+          </ul>
         </div>
-        <div class="js-toDoList-content">
-          <ul class="js-toDoList"></ul>
-          <form class="js-toDoForm">
-            <input type="text" placeholder="Write a to do" />
-          </form>
-        </div>
+        <form class="js-toDoForm">
+          <input class = "input-form" type="text" placeholder="New Todo" required/>
+        </form>
       </div>
+      <button>Todo</button>
     </div>
-
+    <!-- Weather API element -->
     <span class="js-weather">
       <div class="weather__temperatures">
         <img class="weather__icon"></img> 

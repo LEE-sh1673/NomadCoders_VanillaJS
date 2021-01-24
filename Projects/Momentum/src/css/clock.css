@@ -1,24 +1,26 @@
 .js-clock {
-  font-size: 12rem;
-  font-weight: bold;
+  font-size: 9rem;
+  font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Wallpoet", cursive;
-  margin-bottom: 25px;
-  margin-top: 50px;
+  margin: -40px 0 40px 0;
   color: #fff;
-  /* border: 5px solid #ffd51c; */
+  z-index: 1;
+  text-align: center;
 }
 
-.js-clock .clock__sep {
-  font-size: 7rem;
-  margin: 0 14px;
-  height: 100%;
+.js-clock > span {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100%;
+}
+
+.js-clock .clock__sep {
+  font-size: 6rem;
+  margin: 0 14px;
 }
 
 .js-clock .clock__meridiem-wrapper {
@@ -27,17 +29,25 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  font-size: 2rem;
-  font-weight: 600;
-  margin-left: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+.clock__meridiem {
+  opacity: 0.5;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .clock__line {
   width: 100%;
-  margin: 20px 0;
-  border: 1px solid rgba(255, 255, 255, 0.75);
+  height: 1px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .js-clock .clock__seconds {
   color: #fff;
+  padding-block-start: 15px;
 }
