@@ -20,7 +20,6 @@ function GetWeather(lat, lon) {
     .then(function (json) {
       // once the json is ready..
       const iconUrl = `http://openweathermap.org/img/wn/${json.weather[0].icon}.png`;
-      console.log(iconUrl);
       weatherIcon.src = iconUrl;
       const temperature = Math.round(parseFloat(json.main.temp));
       const place = json.name;
@@ -60,7 +59,6 @@ function LoadCoords() {
     AskForCoords();
   } else {
     const parseCoords = JSON.parse(loadedCoords);
-    console.log(parseCoords);
     GetWeather(parseCoords.latitude, parseCoords.longitude);
   }
 }
