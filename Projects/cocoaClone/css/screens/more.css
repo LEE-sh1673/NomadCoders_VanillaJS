@@ -2,8 +2,20 @@
   margin-top: var(--horizontal-space);
 }
 
+.more-screen .icon-row__icon {
+  font-size: 12px;
+}
+
+.more-screen .icon-row__icon i {
+  color: var(--gray-ui-400);
+}
+
+.more-screen .icon-row__icon span {
+  margin-top: 8px;
+}
+
 .more-suggestions {
-  margin-top: 32px;
+  margin-top: 24px;
   padding-top: 12px;
   border-top: 1px solid var(--main-border);
 }
@@ -11,7 +23,7 @@
 .more-suggestions__title {
   font-size: 14px;
   color: var(--gray-ui-400);
-  margin-bottom: 12px;
+  margin-bottom: var(--horizontal-space);
 }
 
 .more-suggestions__icons {
