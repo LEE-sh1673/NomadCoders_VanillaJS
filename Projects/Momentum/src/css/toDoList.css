@@ -1,3 +1,5 @@
+@import "./toDoScrollBar.css";
+
 .js-toDoList-wrapper {
   position: fixed;
   bottom: 15px;
@@ -34,7 +36,7 @@
   animation: fadeIn 0.25s;
   z-index: 2;
   color: #fff;
-  padding: 20px;
+  padding: 20px 15px;
 }
 
 .js-toDoList-window:after {
@@ -104,8 +106,9 @@
 
 .js-toDoList li {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 5px;
+  padding: 5px 10px;
   animation: slide-up 0.6s ease;
 }
 
@@ -117,9 +120,41 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.js-toDoList li input[type="checkbox"] + label {
+  display: inline-block;
+  border-radius: 50%;
+  width: 3px;
+  height: 3px;
+  padding: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+.js-toDoList li input[type="checkbox"]:checked + label {
+  border-color: #0cb85c;
+  background: #0cb85c;
+}
+
+.js-toDoList li input[type="checkbox"]:checked + label::after {
+  content: "✓";
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5px;
+}
+
+.js-toDoList li input[type="checkbox"] {
+  display: none;
+}
+
 .js-toDoList li span {
   width: 100%;
-  padding-left: 5px;
+  padding-left: 7px;
 }
 
 .js-toDoList[data-finished-list] li span {
@@ -142,12 +177,12 @@
 .js-toDoForm .input-form,
 .js-toDoForm .input-form::placeholder {
   font-size: 1.0625rem;
-  color: #333;
+  color: #fff;
   border: none;
   text-align: left;
 }
 .js-toDoForm .input-form::placeholder {
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 @keyframes slide-up {

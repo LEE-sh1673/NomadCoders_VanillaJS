@@ -141,15 +141,18 @@ function DeleteFinishedTask(event) {
   UpdateTaskCount(FINISHED);
 }
 
-function CreateTaskElement(listId, text) {
+function CreateTaskElement(listId, taskObj) {
   const li = document.createElement("li");
   const span = document.createElement("span");
   const delBtn = document.createElement("button");
   const checkBox = document.createElement("input");
+  const label = document.createElement("label");
 
-  span.innerText = text;
-  delBtn.innerText = "Ｘ";
+  span.innerText = taskObj.text;
+  delBtn.innerText = "x";
   checkBox.type = "checkbox";
+  checkBox.id = taskObj.id + "box";
+  label.htmlFor = taskObj.id + "box";
 
   if (listId == PENDING) {
     delBtn.addEventListener("click", DeletePendingTask);
@@ -159,13 +162,14 @@ function CreateTaskElement(listId, text) {
     checkBox.checked = true;
   }
   checkBox.addEventListener("change", SwapTask);
-  li.append(checkBox, span, delBtn);
+  li.append(checkBox, label, span, delBtn);
+  li.id = taskObj.id;
+
   return li;
 }
 
 function PaintPendingTask(taskObj) {
-  const listItem = CreateTaskElement(PENDING, taskObj.text);
-  listItem.id = taskObj.id;
+  const listItem = CreateTaskElement(PENDING, taskObj);
   pendingList.appendChild(listItem);
   taskObjs[PENDING].tasks.push(taskObj);
   //   AppendTaskObj(taskObjs[PENDING], taskObj);
@@ -174,8 +178,7 @@ function PaintPendingTask(taskObj) {
 }
 
 function PaintFinishedTask(taskObj) {
-  const listItem = CreateTaskElement(FINISHED, taskObj.text);
-  listItem.id = taskObj.id;
+  const listItem = CreateTaskElement(FINISHED, taskObj);
   finishedList.appendChild(listItem);
   taskObjs[FINISHED].tasks.push(taskObj);
   //   AppendTaskObj(taskObjs[FINISHED], taskObj);
