@@ -148,3 +148,8 @@ body {
   font-weight: normal;
   font-family: "Noto Sans KR", cursive;
 }
+
+ul li span,
+ol li span {
+  line-height: 1.4;
+}

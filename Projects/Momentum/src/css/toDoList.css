@@ -70,6 +70,7 @@
 
 .js-toDoForm {
   justify-self: flex-end;
+  padding: 0 10px;
 }
 
 .js-toDoList-subtitle {
@@ -84,8 +85,6 @@
 .js-toDoList-subtitle > span {
   opacity: 0.7;
   margin-left: 5px;
-  word-wrap: break-word;
-  word-break: break-all;
 }
 
 .js-toDoList-subtitle:first-child {
@@ -101,7 +100,6 @@
   width: 100%;
   overflow-y: auto;
   padding-bottom: 40px;
-  line-height: 1.2;
 }
 
 .js-toDoList li {
@@ -155,6 +153,7 @@
 .js-toDoList li span {
   width: 100%;
   padding-left: 7px;
+  word-wrap: break-word;
 }
 
 .js-toDoList[data-finished-list] li span {
@@ -176,7 +175,7 @@
 
 .js-toDoForm .input-form,
 .js-toDoForm .input-form::placeholder {
-  font-size: 1.0625rem;
+  font-size: 1rem;
   color: #fff;
   border: none;
   text-align: left;
