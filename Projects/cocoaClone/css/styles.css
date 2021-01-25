@@ -35,4 +35,5 @@ body {
 
 .main-screen {
   padding: 0px var(--horizontal-space);
+  padding-bottom: 60px; /* This make bottom navigator do not hide bottom elements. */
 }
