@@ -9,12 +9,12 @@ function getTime() {
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
   let hours = date.getHours();
-
-  if (hours >= 12) {
-    hours -= 12;
-    meridiem.innerText = "PM";
-  } else {
-    meridiem.innerText = "AM";
+  
+  meridiem.innerText = (hours >= 12) ? "PM" : "AM";
+  hours = hours % 12;
+  
+  if (hours === 0) {
+    hours = 12;
   }
 
   clockHours.innerText = `${hours < 10 ? `0${hours}` : hours}`;
