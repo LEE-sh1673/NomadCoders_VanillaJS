@@ -10,7 +10,7 @@ function getTime() {
   const seconds = date.getSeconds();
   let hours = date.getHours();
 
-  if (hours > 12) {
+  if (hours >= 12) {
     hours -= 12;
     meridiem.innerText = "PM";
   } else {
