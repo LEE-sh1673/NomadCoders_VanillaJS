@@ -5,8 +5,11 @@
   padding: 12px 0px;
   font-size: 12px;
   color: var(--gray-500);
-  margin-bottom: var(--horizontal-space);
-  margin-top: -8px;
+  margin-bottom: 12px;
+}
+
+.screen-header ~ #friends-display-link {
+  margin-top: 86px;
 }
 
 #friends-display-link i {

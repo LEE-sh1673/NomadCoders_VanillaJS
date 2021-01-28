@@ -1,0 +1,18 @@
+.settings__setting {
+  padding: var(--horizontal-space) 0;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings__setting i {
+  margin-right: 12px;
+  font-size: 16px;
+  color: var(--gray-ui-400);
+}
+
+.settings__setting-column:last-child {
+  color: var(--gray-ui-300);
+}

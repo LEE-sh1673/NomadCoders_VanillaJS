@@ -1,6 +1,7 @@
 import { loadUserInfo, validSignPage } from "./login.js";
 import { setUserName } from "./friends.js";
 import "./status-bar.js";
+import "./screen-header.js";
 
 const userInfo = loadUserInfo();
 
