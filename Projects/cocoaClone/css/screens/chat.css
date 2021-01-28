@@ -3,6 +3,11 @@
   height: 1000vh;
 }
 
+.main-chat {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
 .chat__timestamp {
   display: flex;
   flex-direction: column;
@@ -12,11 +17,11 @@
 }
 
 .chat__timestamp span {
-  font-size: 10px;
-  padding: 5px 10px;
+  font-size: 12px;
+  padding: 6px 12px;
   color: var(--gray-ui-400);
   border: 1px solid var(--main-border);
-  border-radius: 15px;
+  border-radius: 16px;
 }
 
 .message-row {
@@ -53,7 +58,7 @@
 }
 
 .messageContent__time {
-  font-size: 7.5px;
+  font-size: 10px;
 }
 
 .message-row--own {
