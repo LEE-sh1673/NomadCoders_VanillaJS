@@ -4,8 +4,8 @@
 }
 
 .main-chat {
-  margin-left: -12px;
-  margin-right: -12px;
+  padding-left: 4px !important;
+  padding-right: 4px !important ;
 }
 
 .chat__timestamp {
@@ -58,7 +58,7 @@
 }
 
 .messageContent__time {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .message-row--own {
