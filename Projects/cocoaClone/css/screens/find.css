@@ -6,7 +6,7 @@
 }
 
 .recommended-friends__title {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--gray-ui-400);
 }
 
@@ -27,7 +27,7 @@
 
 .open-chat__header .open-chat__title,
 .open-chat__header span {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .open-chat__header span {

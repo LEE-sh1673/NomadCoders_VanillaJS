@@ -11,7 +11,29 @@
 }
 
 .more-screen .icon-row__icon span {
-  margin-top: 8px;
+  margin-top: 10px;
+}
+
+.more-screen #friends-display-link {
+  margin-bottom: 24px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: var(--horizontal-space);
+  padding-right: var(--horizontal-space);
+}
+
+.more-screen #friends-display-link div:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.more-screen #friends-display-link div:last-child span:not(:last-child) {
+  padding-right: 8px;
+}
+
+.more-screen #friends-display-link div:last-child span:nth-child(2) {
+  color: var(--gray-300);
 }
 
 .more-suggestions {
@@ -21,7 +43,7 @@
 }
 
 .more-suggestions__title {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--gray-ui-400);
   margin-bottom: var(--horizontal-space);
 }
@@ -44,7 +66,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .suggestions--story {

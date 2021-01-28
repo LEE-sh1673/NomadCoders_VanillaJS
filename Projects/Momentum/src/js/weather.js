@@ -8,7 +8,6 @@ const weather = document.querySelector(".js-weather"),
 
 /*
 method.then(): 데이터가 완전히 들어온 다음 호출
-
 */
 function GetWeather(lat, lon) {
   fetch(
