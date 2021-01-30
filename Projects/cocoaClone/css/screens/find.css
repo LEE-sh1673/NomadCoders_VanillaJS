@@ -44,7 +44,7 @@
 }
 
 .open-post:not(:last-child) {
-  border-bottom: 1px solid var(--main-border);
+  border-bottom: 1px solid var(--gray-100);
 }
 
 .open-post__column:last-child {

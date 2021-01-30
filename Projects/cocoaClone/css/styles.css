@@ -48,3 +48,8 @@ body {
   -moz-box-shadow: 0 4px 4px rgba(186, 188, 190, 0.3);
   box-shadow: 0 4px 4px rgba(186, 188, 190, 0.3);
 }
+
+.blur {
+  backdrop-filter: saturate(200%) blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+}
