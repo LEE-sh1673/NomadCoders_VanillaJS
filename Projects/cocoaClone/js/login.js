@@ -17,13 +17,13 @@ function saveUserInfo(username, password) {
 }
 
 // If all of the register process is done, then showing walkthrough before we move on.
-function displayWalkThroughs() {
-  if (isFirst) {
-    walkThroughs.style.opacity = "1";
-    walkThroughs.style.zIndex = "1";
-    isFirst = false;
-  }
-}
+// function displayWalkThroughs() {
+//   if (isFirst) {
+//     walkThroughs.style.opacity = "1";
+//     walkThroughs.style.zIndex = "1";
+//     isFirst = false;
+//   }
+// }
 
 if (loginForm) {
   // save current user information and move to friends page.
@@ -32,7 +32,9 @@ if (loginForm) {
       const username = event.target.form[0].value;
       const password = event.target.form[1].value;
       saveUserInfo(username, password);
-      displayWalkThroughs();
+      // displayWalkThroughs();
+      isFirst = false;
+      window.location.replace("./friends.html");
     }
   }
 
@@ -51,12 +53,12 @@ if (loginForm) {
 }
 
 // If current walkthourh page is activated, then add event listener to go on next page.
-if (walkThroughs__btn) {
-  walkThroughs__btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.location.replace("./friends.html");
-  });
-}
+// if (walkThroughs__btn) {
+//   walkThroughs__btn.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     window.location.replace("./friends.html");
+//   });
+// }
 
 // load user information from local storage.
 export function loadUserInfo() {
